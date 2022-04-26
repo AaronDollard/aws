@@ -62,7 +62,242 @@
 			width: 815px;
 			background-color: #000000;
 		}
+
+		label {
+			display: inline-block;
+			width: 250px;
+			text-align: right;
+		}
+
+		input {
+			display: inline-block;
+		}
+
+		.button {
+			background: url(https://www.runescape.com/img/rsp777/splash/compare_users.gif) no-repeat center;
+			color: white;
+			display: inline-block;
+			font-weight: bold;
+			margin-right: 8px;
+			padding: 11px;
+			text-align: center;
+			vertical-align: top;
+		}
 	</style>
+
+	<header class="banner"></header>
+
+	<div class="content">
+		<h2 class="heading">Old School RuneScape Hiscores</h2>
+		<p>The table below shows the most recent players added to the Old School Runescape hiscore. Add your friends and
+			your own account too to join the leaderboards. Don't forget to update your skills regularly to keep the
+			leaderboards fresh!</p>
+		<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+			<tr>
+				<td>
+					<h4>Account Name</h4>
+					<div id="playerUsername"></div>
+				</td>
+				<td>
+					<h4>Total lvl</h4>
+					<div id="playerTotal"></div>
+				</td>
+				<td>
+					<h4>Attack</h4>
+					<div id="playerAttack"></div>
+				</td>
+				<td>
+					<h4>Defence</h4>
+					<div id="playerDefence"></div>
+				</td>
+				<td>
+					<h4>Ranged</h4>
+					<div id="playerRanged"></div>
+				</td>
+				<td>
+					<h4>Prayer</h4>
+					<div id="playerPrayer"></div>
+				</td>
+				<td>
+					<h4>Magic</h4>
+					<div id="playerMagic"></div>
+				</td>
+				<td>
+					<h4>Runecrafting</h4>
+					<div id="playerRunecrafting"></div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<h4>Hitpoints</h4>
+					<div id="playerHitpoints"></div>
+				</td>
+				<td>
+					<h4>Agility</h4>
+					<div id="playerAgility"></div>
+				</td>
+				<td>
+					<h4>Herblore</h4>
+					<div id="playerHerblore"></div>
+				</td>
+				<td>
+					<h4>Thieving</h4>
+					<div id="playerThieving"></div>
+				</td>
+				<td>
+					<h4>Crafting</h4>
+					<div id="playerCrafting"></div>
+				</td>
+				<td>
+					<h4>Fletching</h4>
+					<div id="playerFletching"></div>
+				</td>
+				<td>
+					<h4>Slayer</h4>
+					<div id="playerSlayer"></div>
+				</td>
+				<td>
+					<h4>Hunting</h4>
+					<div id="playerHunting"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h4>Mining</h4>
+					<div id="playerMining"></div>
+				</td>
+				<td>
+					<h4>Smithing</h4>
+					<div id="playerSmithing"></div>
+				</td>
+				<td>
+					<h4>Fishing</h4>
+					<div id="playerFishing"></div>
+				</td>
+				<td>
+					<h4>Cooking</h4>
+					<div id="playerCooking"></div>
+				</td>
+				<td>
+					<h4>Firemaking</h4>
+					<div id="playerFiremaking"></div>
+				</td>
+				<td>
+					<h4>Woodcutting</h4>
+					<div id="playerWoodcutting"></div>
+				</td>
+				<td>
+					<h4>Farming</h4>
+					<div id="playerFarming"></div>
+				</td>
+				<td>
+					<h4>Construction</h4>
+					<div id="playerConstruction"></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<br><br>
+
+	<div class="content">
+		<h2>Upload Multiple Old School Runescape Hiscores</h2>
+		<p>Click on the "Choose Files" button and select the JSON containing multiple characters to do a quick upload to
+			the leaderboards!</p>
+		<form method="post" enctype="multipart/form-data" ,
+			action="https://2nzowgkr36.execute-api.eu-west-1.amazonaws.com/dev/upload">
+			Select Files:
+			<input type="file" name="file" multiple><br><br>
+			<input class='button' type="submit" name="submit" value="Upload">
+		</form>
+	</div>
+
+	<br><br>
+
+	<div class="content">
+		<h2>Upload your hiscore</h2>
+		<p>Fill in the form below to add your characters hiscore to the leaderboards:</p>
+
+		<form>
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username"><br>
+
+			<label for="lvltotal">Total lvl:</label>
+			<input type="text" id="lvltotal" name="lvltotal"><br>
+
+			<label for="attack">Attack:</label>
+			<input type="text" id="attack" name="attack"><br>
+
+			<label for="strength">Strength:</label>
+			<input type="text" id="strength" name="strength"><br>
+
+			<label for="defence">Defence:</label>
+			<input type="text" id="defence" name="defence"><br>
+
+			<label for="ranged">Ranged:</label>
+			<input type="text" id="ranged" name="ranged"><br>
+
+			<label for="prayer">Prayer:</label>
+			<input type="text" id="prayer" name="prayer"><br>
+
+			<label for="magic">Magic:</label>
+			<input type="text" id="magic" name="magic"><br>
+
+			<label for="runecrafting">Runecrafting:</label>
+			<input type="text" id="runecrafting" name="runecrafting"><br>
+
+			<label for="hitpoints">Hitpoints:</label>
+			<input type="text" id="hitpoints" name="hitpoints"><br>
+
+			<label for="agility">Agility:</label>
+			<input type="text" id="agility" name="agility"><br>
+
+			<label for="herblore">Herblore:</label>
+			<input type="text" id="herblore" name="herblore"><br>
+
+			<label for="thieving">Thieving:</label>
+			<input type="text" id="thieving" name="thieving"><br>
+
+			<label for="crafting">Crafting:</label>
+			<input type="text" id="crafting" name="crafting"><br>
+
+			<label for="fletching">Fletching:</label>
+			<input type="text" id="fletching" name="fletching"><br>
+
+			<label for="slayer">Slayer:</label>
+			<input type="text" id="slayer" name="slayer"><br>
+
+			<label for="hunting">Hunting:</label>
+			<input type="text" id="hunting" name="hunting"><br>
+
+			<label for="mining">Mining:</label>
+			<input type="text" id="mining" name="mining"><br>
+
+			<label for="smithing">Smithing:</label>
+			<input type="text" id="smithing" name="smithing"><br>
+
+			<label for="fishing">Fishing:</label>
+			<input type="text" id="fishing" name="fishing"><br>
+
+			<label for="cooking">Cooking:</label>
+			<input type="text" id="cooking" name="cooking"><br>
+
+			<label for="firemaking">Firemaking:</label>
+			<input type="text" id="firemaking" name="firemaking"><br>
+
+			<label for="woodcutting">Woodcutting:</label>
+			<input type="text" id="woodcutting" name="woodcutting"><br>
+
+			<label for="farming">Farming:</label>
+			<input type="text" id="farming" name="farming"><br>
+
+			<label for="construction">Construction:</label>
+			<input type="text" id="construction" name="construction"><br>
+		</form>
+		<button class='button' onclick="addhiscore()">Submit</button>
+	</div>
+
 
 	<script type="application/javascript">
 		fetch('https://2nzowgkr36.execute-api.eu-west-1.amazonaws.com/dev/populate')
@@ -224,138 +459,55 @@
 		}
 	</script>
 
-	<header class="banner"></header>
+	<script type="application/javascript">
+		function addhiscore() {
+			var username = document.getElementById("username").value
+			var myHeaders = new Headers();
+			myHeaders.append("Content-Type", "application/json");
 
-	<div class="content">
-		<h2 class="heading">Old School RuneScape Leaderboards</h2>
-		<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
-			<tr>
-				<td>
-					<h4>Account Name</h4>
-					<div id="playerUsername"></div>
-				</td>
-				<td>
-					<h4>Total lvl</h4>
-					<div id="playerTotal"></div>
-				</td>
-				<td>
-					<h4>Attack</h4>
-					<div id="playerAttack"></div>
-				</td>
-				<td>
-					<h4>Defence</h4>
-					<div id="playerDefence"></div>
-				</td>
-				<td>
-					<h4>Ranged</h4>
-					<div id="playerRanged"></div>
-				</td>
-				<td>
-					<h4>Prayer</h4>
-					<div id="playerPrayer"></div>
-				</td>
-				<td>
-					<h4>Magic</h4>
-					<div id="playerMagic"></div>
-				</td>
-				<td>
-					<h4>Runecrafting</h4>
-					<div id="playerRunecrafting"></div>
-				</td>
-			</tr>
+			var data = JSON.stringify(
+				{
+					"username": username,
+					"lvltotal": document.getElementById("lvltotal").value,
+					"attack": document.getElementById("attack").value,
+					"strength": document.getElementById("strength").value,
+					"defence": document.getElementById("defence").value,
+					"ranged": document.getElementById("ranged").value,
+					"prayer": document.getElementById("prayer").value,
+					"magic": document.getElementById("magic").value,
+					"runecrafting": document.getElementById("runecrafting").value,
+					"construction": document.getElementById("construction").value,
+					"hitpoints": document.getElementById("hitpoints").value,
+					"agility": document.getElementById("agility").value,
+					"herblore": document.getElementById("herblore").value,
+					"thieving": document.getElementById("thieving").value,
+					"crafting": document.getElementById("crafting").value,
+					"fletching": document.getElementById("fletching").value,
+					"slayer": document.getElementById("slayer").value,
+					"hunting": document.getElementById("hunting").value,
+					"mining": document.getElementById("mining").value,
+					"smithing": document.getElementById("smithing").value,
+					"fishing": document.getElementById("fishing").value,
+					"cooking": document.getElementById("cooking").value,
+					"firemaking": document.getElementById("firemaking").value,
+					"woodcutting": document.getElementById("woodcutting").value,
+					"farming": document.getElementById("farming").value
+				});
 
-			<tr>
-				<td>
-					<h4>Hitpoints</h4>
-					<div id="playerHitpoints"></div>
-				</td>
-				<td>
-					<h4>Agility</h4>
-					<div id="playerAgility"></div>
-				</td>
-				<td>
-					<h4>Herblore</h4>
-					<div id="playerHerblore"></div>
-				</td>
-				<td>
-					<h4>Thieving</h4>
-					<div id="playerThieving"></div>
-				</td>
-				<td>
-					<h4>Crafting</h4>
-					<div id="playerCrafting"></div>
-				</td>
-				<td>
-					<h4>Fletching</h4>
-					<div id="playerFletching"></div>
-				</td>
-				<td>
-					<h4>Slayer</h4>
-					<div id="playerSlayer"></div>
-				</td>
-				<td>
-					<h4>Hunting</h4>
-					<div id="playerHunting"></div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<h4>Mining</h4>
-					<div id="playerMining"></div>
-				</td>
-				<td>
-					<h4>Smithing</h4>
-					<div id="playerSmithing"></div>
-				</td>
-				<td>
-					<h4>Fishing</h4>
-					<div id="playerFishing"></div>
-				</td>
-				<td>
-					<h4>Cooking</h4>
-					<div id="playerCooking"></div>
-				</td>
-				<td>
-					<h4>Firemaking</h4>
-					<div id="playerFiremaking"></div>
-				</td>
-				<td>
-					<h4>Woodcutting</h4>
-					<div id="playerWoodcutting"></div>
-				</td>
-				<td>
-					<h4>Farming</h4>
-					<div id="playerFarming"></div>
-				</td>
-				<td>
-					<h4>Construction</h4>
-					<div id="playerConstruction"></div>
-				</td>
-			</tr>
-		</table>
-	</div>
+			var requestOptions = {
+				method: 'POST',
+				headers: myHeaders,
+				body: data,
+				redirect: 'follow'
+			};
 
-	<br><br>
-
-	<div class="content">
-		<h2>Upload OldSchoolRunescape Stats</h2>
-		<p>Click on the "Choose Files" button and select your JSON</p>
-		<form method="post" enctype="multipart/form-data" ,
-			action="https://2nzowgkr36.execute-api.eu-west-1.amazonaws.com/dev/upload">
-			Select Files:
-			<input type="file" name="file" multiple><br><br>
-			<input type="submit" name="submit" value="Upload">
-		</form>
-	</div>
-
-	<br><br>
-
-	<div class="content">
-		<h2>Add your hiscore</h2>
-		<p>Fill in the form below to add your hiscore</p>
-	</div>
-
-
+			fetch("https://2nzowgkr36.execute-api.eu-west-1.amazonaws.com/dev/uploadchar", requestOptions)
+				.then(response => response.json())
+				.then(data => alert(data));
+		}
+	</script>
 </body>
+
+
 
 </html>
