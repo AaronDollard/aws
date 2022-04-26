@@ -13,6 +13,55 @@
 		tr {
 			border: 1px solid black;
 		}
+
+		.banner {
+			background: url(https://www.runescape.com/img/rsp777/title2/rslogo3.png) no-repeat center;
+			display: block;
+			margin-bottom: 25px;
+			min-height: 135px;
+			text-align: center;
+		}
+
+		.heading {
+			color: #6D4211;
+			font-family: initial;
+			font-size: 3.5em;
+			font-weight: bold;
+			margin-bottom: 20px;
+			text-align: center;
+			text-shadow: 1px 1px 1px #000000;
+		}
+
+		.content {
+			background: url(https://www.runescape.com/img/rsp777/scroll/backdrop_745.gif) repeat-y top center;
+			padding: 50px 75px;
+			position: relative;
+		}
+
+		.content:before,
+		.content:after {
+			background: url(https://www.runescape.com/img/rsp777/scroll/backdrop_765_top.gif) no-repeat center top;
+			content: '';
+			height: 50px;
+			left: 0;
+			position: absolute;
+			top: -11px;
+			width: 100%;
+		}
+
+		.content:after {
+			background: url(https://www.runescape.com/img/rsp777/scroll/backdrop_765_bottom.gif) no-repeat center bottom;
+			bottom: -11px;
+			top: auto;
+		}
+
+		body {
+			background: url(https://www.runescape.com/img/rsp777/bg2.jpg) repeat-y center top;
+			margin: 0 auto;
+			padding: 0 50px;
+			width: 815px;
+			background-color: #000000;
+		}
 	</style>
 
 	<script type="application/javascript">
@@ -175,121 +224,136 @@
 		}
 	</script>
 
+	<header class="banner"></header>
 
-	<h2>Get Leaderboards For Old School RuneScape</h2>
-	<table>
-		<tr>
-			<td>
-				<h4>Account Name</h4>
-				<div id="playerUsername"></div>
-			</td>
-			<td>
-				<h4>Total Level</h4>
-				<div id="playerTotal"></div>
-			</td>
-			<td>
-				<h4>Attack</h4>
-				<div id="playerAttack"></div>
-			</td>
-			<td>
-				<h4>Defence</h4>
-				<div id="playerDefence"></div>
-			</td>
-			<td>
-				<h4>Ranged</h4>
-				<div id="playerRanged"></div>
-			</td>
-			<td>
-				<h4>Prayer</h4>
-				<div id="playerPrayer"></div>
-			</td>
-			<td>
-				<h4>Magic</h4>
-				<div id="playerMagic"></div>
-			</td>
-			<td>
-				<h4>Runecrafting</h4>
-				<div id="playerRunecrafting"></div>
-			</td>
-			<td>
-				<h4>Construction</h4>
-				<div id="playerConstruction"></div>
-			</td>
-			<td>
-				<h4>Hitpoints</h4>
-				<div id="playerHitpoints"></div>
-			</td>
-			<td>
-				<h4>Agility</h4>
-				<div id="playerAgility"></div>
-			</td>
-			<td>
-				<h4>Herblore</h4>
-				<div id="playerHerblore"></div>
-			</td>
-			<td>
-				<h4>Thieving</h4>
-				<div id="playerThieving"></div>
-			</td>
-			<td>
-				<h4>Crafting</h4>
-				<div id="playerCrafting"></div>
-			</td>
-			<td>
-				<h4>Fletching</h4>
-				<div id="playerFletching"></div>
-			</td>
-			<td>
-				<h4>Slayer</h4>
-				<div id="playerSlayer"></div>
-			</td>
-			<td>
-				<h4>Hunting</h4>
-				<div id="playerHunting"></div>
-			</td>
-			<td>
-				<h4>Mining</h4>
-				<div id="playerMining"></div>
-			</td>
-			<td>
-				<h4>Smithing</h4>
-				<div id="playerSmithing"></div>
-			</td>
-			<td>
-				<h4>Fishing</h4>
-				<div id="playerFishing"></div>
-			</td>
-			<td>
-				<h4>Cooking</h4>
-				<div id="playerCooking"></div>
-			</td>
-			<td>
-				<h4>Firemaking</h4>
-				<div id="playerFiremaking"></div>
-			</td>
-			<td>
-				<h4>Woodcutting</h4>
-				<div id="playerWoodcutting"></div>
-			</td>
-			<td>
-				<h4>Farming</h4>
-				<div id="playerFarming"></div>
-			</td>
-		</tr>
-	</table>
+	<div class="content">
+		<h2 class="heading">Old School RuneScape Leaderboards</h2>
+		<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+			<tr>
+				<td>
+					<h4>Account Name</h4>
+					<div id="playerUsername"></div>
+				</td>
+				<td>
+					<h4>Total lvl</h4>
+					<div id="playerTotal"></div>
+				</td>
+				<td>
+					<h4>Attack</h4>
+					<div id="playerAttack"></div>
+				</td>
+				<td>
+					<h4>Defence</h4>
+					<div id="playerDefence"></div>
+				</td>
+				<td>
+					<h4>Ranged</h4>
+					<div id="playerRanged"></div>
+				</td>
+				<td>
+					<h4>Prayer</h4>
+					<div id="playerPrayer"></div>
+				</td>
+				<td>
+					<h4>Magic</h4>
+					<div id="playerMagic"></div>
+				</td>
+				<td>
+					<h4>Runecrafting</h4>
+					<div id="playerRunecrafting"></div>
+				</td>
+			</tr>
 
-	<h2>Upload OldSchoolRunescape Stats</h2>
-	<p>Click on the "Choose Files" button and select your JSON</p>
-	<form method="post" enctype="multipart/form-data" ,
-		action="https://2nzowgkr36.execute-api.eu-west-1.amazonaws.com/dev/upload">
-		Select Files:
-		<input type="file" name="file" multiple><br><br>
-		<input type="submit" name="submit" value="Upload">
-	</form>
+			<tr>
+				<td>
+					<h4>Hitpoints</h4>
+					<div id="playerHitpoints"></div>
+				</td>
+				<td>
+					<h4>Agility</h4>
+					<div id="playerAgility"></div>
+				</td>
+				<td>
+					<h4>Herblore</h4>
+					<div id="playerHerblore"></div>
+				</td>
+				<td>
+					<h4>Thieving</h4>
+					<div id="playerThieving"></div>
+				</td>
+				<td>
+					<h4>Crafting</h4>
+					<div id="playerCrafting"></div>
+				</td>
+				<td>
+					<h4>Fletching</h4>
+					<div id="playerFletching"></div>
+				</td>
+				<td>
+					<h4>Slayer</h4>
+					<div id="playerSlayer"></div>
+				</td>
+				<td>
+					<h4>Hunting</h4>
+					<div id="playerHunting"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h4>Mining</h4>
+					<div id="playerMining"></div>
+				</td>
+				<td>
+					<h4>Smithing</h4>
+					<div id="playerSmithing"></div>
+				</td>
+				<td>
+					<h4>Fishing</h4>
+					<div id="playerFishing"></div>
+				</td>
+				<td>
+					<h4>Cooking</h4>
+					<div id="playerCooking"></div>
+				</td>
+				<td>
+					<h4>Firemaking</h4>
+					<div id="playerFiremaking"></div>
+				</td>
+				<td>
+					<h4>Woodcutting</h4>
+					<div id="playerWoodcutting"></div>
+				</td>
+				<td>
+					<h4>Farming</h4>
+					<div id="playerFarming"></div>
+				</td>
+				<td>
+					<h4>Construction</h4>
+					<div id="playerConstruction"></div>
+				</td>
+			</tr>
+		</table>
+	</div>
 
-	<h2>Add your hiscore</h2>
-	<p>Fill in the form below to add your hiscore</p>
+	<br><br>
 
+	<div class="content">
+		<h2>Upload OldSchoolRunescape Stats</h2>
+		<p>Click on the "Choose Files" button and select your JSON</p>
+		<form method="post" enctype="multipart/form-data" ,
+			action="https://2nzowgkr36.execute-api.eu-west-1.amazonaws.com/dev/upload">
+			Select Files:
+			<input type="file" name="file" multiple><br><br>
+			<input type="submit" name="submit" value="Upload">
+		</form>
+	</div>
+
+	<br><br>
+
+	<div class="content">
+		<h2>Add your hiscore</h2>
+		<p>Fill in the form below to add your hiscore</p>
+	</div>
 
 
 </body>
