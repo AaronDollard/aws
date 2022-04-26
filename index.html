@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Cloud Development - Final Project</title>
+</head>
+
+<body>
+
+	<style>
+		table,
+		td,
+		tr {
+			border: 1px solid black;
+		}
+	</style>
+
+	<script type="application/javascript">
+		fetch('https://2nzowgkr36.execute-api.eu-west-1.amazonaws.com/dev/populate')
+			.then(function (response) {
+				return response.json();
+			})
+			.then(function (data) {
+				appendData(data);
+			})
+			.catch(function (err) {
+				console.log('error: ' + err);
+			});
+
+		function appendData(data) {
+			var mainContainer = document.getElementById("playerUsername");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].username;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerTotal");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].lvltotal;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerAttack");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].attack;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerDefence");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].defence;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerRanged");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].ranged;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerPrayer");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].prayer;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerMagic");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].magic;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerRunecrafting");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].runecrafting;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerConstruction");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].construction;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerHitpoints");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].hitpoints;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerAgility");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].agility;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerHerblore");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].herblore;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerThieving");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].thieving;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerCrafting");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].crafting;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerFletching");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].fletching;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerSlayer");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].slayer;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerHunting");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].hunting;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerMining");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].mining;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerSmithing");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].smithing;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerFishing");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].fishing;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerCooking");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].cooking;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerFiremaking");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].firemaking;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerWoodcutting");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].woodcutting;
+				mainContainer.appendChild(div);
+			}
+			var mainContainer = document.getElementById("playerFarming");
+			for (var i = 0; i < data.length; i++) {
+				var div = document.createElement("div");
+				div.innerHTML = data[i].farming;
+				mainContainer.appendChild(div);
+			}
+		}
+	</script>
+
+
+	<h2>Get Leaderboards For Old School RuneScape</h2>
+	<table>
+		<tr>
+			<td>
+				<h4>Account Name</h4>
+				<div id="playerUsername"></div>
+			</td>
+			<td>
+				<h4>Total Level</h4>
+				<div id="playerTotal"></div>
+			</td>
+			<td>
+				<h4>Attack</h4>
+				<div id="playerAttack"></div>
+			</td>
+			<td>
+				<h4>Defence</h4>
+				<div id="playerDefence"></div>
+			</td>
+			<td>
+				<h4>Ranged</h4>
+				<div id="playerRanged"></div>
+			</td>
+			<td>
+				<h4>Prayer</h4>
+				<div id="playerPrayer"></div>
+			</td>
+			<td>
+				<h4>Magic</h4>
+				<div id="playerMagic"></div>
+			</td>
+			<td>
+				<h4>Runecrafting</h4>
+				<div id="playerRunecrafting"></div>
+			</td>
+			<td>
+				<h4>Construction</h4>
+				<div id="playerConstruction"></div>
+			</td>
+			<td>
+				<h4>Hitpoints</h4>
+				<div id="playerHitpoints"></div>
+			</td>
+			<td>
+				<h4>Agility</h4>
+				<div id="playerAgility"></div>
+			</td>
+			<td>
+				<h4>Herblore</h4>
+				<div id="playerHerblore"></div>
+			</td>
+			<td>
+				<h4>Thieving</h4>
+				<div id="playerThieving"></div>
+			</td>
+			<td>
+				<h4>Crafting</h4>
+				<div id="playerCrafting"></div>
+			</td>
+			<td>
+				<h4>Fletching</h4>
+				<div id="playerFletching"></div>
+			</td>
+			<td>
+				<h4>Slayer</h4>
+				<div id="playerSlayer"></div>
+			</td>
+			<td>
+				<h4>Hunting</h4>
+				<div id="playerHunting"></div>
+			</td>
+			<td>
+				<h4>Mining</h4>
+				<div id="playerMining"></div>
+			</td>
+			<td>
+				<h4>Smithing</h4>
+				<div id="playerSmithing"></div>
+			</td>
+			<td>
+				<h4>Fishing</h4>
+				<div id="playerFishing"></div>
+			</td>
+			<td>
+				<h4>Cooking</h4>
+				<div id="playerCooking"></div>
+			</td>
+			<td>
+				<h4>Firemaking</h4>
+				<div id="playerFiremaking"></div>
+			</td>
+			<td>
+				<h4>Woodcutting</h4>
+				<div id="playerWoodcutting"></div>
+			</td>
+			<td>
+				<h4>Farming</h4>
+				<div id="playerFarming"></div>
+			</td>
+		</tr>
+	</table>
+
+	<h2>Upload OldSchoolRunescape Stats</h2>
+	<p>Click on the "Choose Files" button and select your JSON</p>
+	<form method="post" enctype="multipart/form-data" ,
+		action="https://2nzowgkr36.execute-api.eu-west-1.amazonaws.com/dev/upload">
+		Select Files:
+		<input type="file" name="file" multiple><br><br>
+		<input type="submit" name="submit" value="Upload">
+	</form>
+
+	<h2>Add your hiscore</h2>
+	<p>Fill in the form below to add your hiscore</p>
+
+
+
+</body>
+
+</html>
